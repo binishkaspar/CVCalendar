@@ -260,6 +260,15 @@ extension CVCalendarView {
             controller.performedDayViewSelection(dayView) // TODO: Update to range selection
         }
     }
+    
+    public func didSelectDayViewFromTouch(dayView: CVCalendarDayView) {
+        didSelectDayView(dayView)
+        if let _ = contentController {
+            delegate?.didSelectDayViewFromTouch?(dayView, animationDidFinish: false)
+        }
+    }
+    
+    
 }
 
 // MARK: - Convenience API
