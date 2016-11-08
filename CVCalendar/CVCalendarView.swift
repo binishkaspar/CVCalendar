@@ -253,10 +253,10 @@ extension CVCalendarView {
         }
     }
     
-    public func didSelectDayViewFromTouch(dayView: CVCalendarDayView) {
+    public func didUserSelectDayView(_ dayView: CVCalendarDayView) {
         didSelectDayView(dayView)
         if let _ = contentController {
-            delegate?.didSelectDayViewFromTouch?(dayView, animationDidFinish: false)
+            delegate?.didUserSelectDayView?(dayView, animationDidFinish: false)
         }
     }
     
